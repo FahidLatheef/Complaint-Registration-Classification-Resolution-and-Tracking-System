@@ -23,7 +23,7 @@ stopwords = ['i', 'me', 'my', 'myself', 'we', 'our', 'ours', 'ourselves', 'you',
 
 
 def prediction_category(new_complaint):
-    filename = 'model/CC_model_BLSVC.pkl'
+    filename = 'model/CC_model_LR.pkl'
     loaded_model = pickle.load(open(filename, 'rb'))
     result = loaded_model.predict(new_complaint)
     return result
