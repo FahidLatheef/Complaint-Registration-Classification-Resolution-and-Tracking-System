@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Complaint Status
+{% endblock %}
+
+{% block body %}
+<center>
+    <form method="POST" action="">
+        Complaint ID: <input type = "number" name = "Id" maxlength="10" required="required"/>
+        Email: <input type = "email" name = "Email" maxlength="30" required="required"/>
+        <input type="submit" value="Check the Status"/>
+    </form>
+</center>
+
+    {% if error %}
+      <p class="error"><strong>Message:</strong> {{ error }}
+    {% endif %}
+
+{% endblock %}

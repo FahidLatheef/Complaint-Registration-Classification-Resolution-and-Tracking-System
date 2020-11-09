@@ -1,0 +1,37 @@
+{% extends 'base.html'%}
+
+{% block title %}
+Thank You
+{% endblock %}
+
+{% block body %}
+{% for user in user_details %}
+<table border = 1>
+    <tr>
+      <th> <b>Name</b> </th>
+      <th> <b>Email</b> </th>
+      <th> <b>Issue</b> </th>
+      <th> <b>Sub-Issue</b> </th>
+      <th> <b>Details</b></th>
+  </tr>
+  <tr>
+    <td> {{user[1]}} </td>
+    <td> {{user[2]}} </td>
+    <td> {{user[4]}} </td>
+    <td> {{user[5]}} </td>
+    <td> {{user[6]}} </td>
+  </tr>
+{% endfor %}
+</table>
+
+<br>
+<body>
+{% for user in user_details %}
+The Complaint with Complaint ID <b>{{user[0]}}</b> is classified under the <b>{{user[7]}}</b> Product-Category. Note the complaint ID for later use.
+<br>
+Our <b>{{user[7]}}</b> category representative will be in touch with you soon by e-mail.
+
+{% endfor %}
+
+</body>
+{% endblock %}

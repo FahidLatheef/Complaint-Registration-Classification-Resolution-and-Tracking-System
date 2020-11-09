@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Complaint Response for Complaint ID {{id_}}
+{% endblock %}
+
+{% block body %}
+<table border = 1>
+  {% for user in details %}
+    <tr>
+        <th> <b>Complaint ID</b> </th>
+        <th> <b>Issue</b> </th>
+        <th> <b>Sub-Issue</b> </th>
+        <th> <b>Details</b></th>
+        <th> <b>Product</b></th>
+        <th> <b>Response</b></th>
+    </tr>
+    <tr>
+        <td> {{user[0]}} </td>
+        <td> {{user[4]}} </td>
+        <td> {{user[5]}} </td>
+        <td> {{user[6]}} </td>
+        <td> {{user[7]}} </td>
+        <td> {{user[8]}} </td>
+    </tr>
+  {% endfor %}
+</table>
+
+
+<form action="http://127.0.0.1:5000/final" method="post">
+    Complaint ID: <input type="number" name = "id" disabled placeholder={{id_}}><br>
+    <input type="hidden" name="id" value={{id_}}>
+    <p>Are you satisfied with the response?:</p>
+    <input type="radio" id="yes" name="response" value="Yes" Checked>
+    <label for="yes">Yes, I am happy with the response.</label><br>
+    <input type="radio" id="no" name="response" value="No">
+    <label for="no">No, I am not happy with the response.</label><br>
+
+  <input type="submit" value="Submit and go back to home" onclick="return confirm('Are you sure to submit and go back to home?')">
+</form>
+
+
+
+{% endblock %}

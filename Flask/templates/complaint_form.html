@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Complaint Form
+{% endblock %}
+
+{% block body %}
+<form method="POST" action="" >
+      Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type = "text" name = "Name" maxlength="30" required="required" pattern="[A-Za-z\s]{1,30}"/><br>
+      <br>
+      Email: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type = "email" name = "Email" maxlength="30" required="required"/><br>
+      <br>
+      Issue: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type = "text" name = "Issue" maxlength="40" required="required"/><br>
+      <br>
+      Sub-issue: <input type = "text" name = "Sub-issue" maxlength="40" /><br>
+      <br>
+      <br>Details of the Complaint:<br> <textarea rows="2" cols="20" name="Consumer complaint narrative" maxlength="1000" style="width: 900px; height: 200px" wrap="hard"></textarea>
+      <input type="submit" onclick="return confirm('Are you sure?')" />
+</form>
+{% endblock %}

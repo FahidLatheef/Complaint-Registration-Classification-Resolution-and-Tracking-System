@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Category Assistant
+{% endblock %}
+
+{% block body %}
+<h1> User: {{user}} Category: {{product}}</h1>
+
+<table border = 1>
+  {% for user in user_details %}
+    <tr>
+        <th> <b>Complaint ID</b> </th>
+        <th> <b>Name</b> </th>
+        <th> <b>Email</b> </th>
+        <th> <b>Issue</b> </th>
+        <th> <b>Sub-Issue</b> </th>
+        <th> <b>Details</b></th>
+    </tr>
+    <tr>
+        <td> {{user[0]}} </td>
+        <td> {{user[1]}} </td>
+        <td> {{user[2]}} </td>
+        <td> {{user[4]}} </td>
+        <td> {{user[5]}} </td>
+        <td> {{user[6]}} </td>
+    </tr>
+  {% endfor %}
+</table>
+<form method="POST" action="">
+    <b>Complaint ID</b> <input type = "number" name = "Id" maxlength="10" required="required"/>
+    <b>Email</b> <input type = "email" name = "Email" maxlength="30" required="required"/>
+    <b>Resolution</b> <textarea rows="4" cols="20" name="resolution" maxlength="1000" style="width: 600px; height: 200px" wrap="hard"></textarea>
+    <input type="submit" value="Update" onclick="return confirm('Are you sure?')"/>
+</form>
+{% endblock %}

@@ -1,0 +1,18 @@
+Password and username is currently stored in password.py
+Password and username is same currently
+
+Admin details
+
+Mortgage                                                                        admin01
+Debt collection                                                                 admin02
+Credit reporting                                                                admin03
+Credit card or prepaid card                                                     admin04
+Bank account or service                                                         admin05
+Credit reporting, credit repair services, or other personal consumer reports    admin06
+Student loan                                                                    admin07
+Consumer Loan                                                                   admin08
+Checking or savings account                                                     admin09
+Payday loan, title loan, or personal loan                                       admin10
+Money transfers                                                                 admin11
+Vehicle loan or lease                                                           admin12
+Other financial service                                                         admin13
