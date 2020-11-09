@@ -4,3 +4,5 @@ This is an end-to-end Complaint registration System (web-app) which can be used 
 Every process is notified to both employees and customer via email.
 
 Used Flask Framework of Python.
+
+Install the requirements and run app_cms.py
