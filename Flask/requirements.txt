@@ -1,0 +1,4 @@
+flask
+flask-mysqldb
+yaml~=0.2.5
+scikit-learn~=0.23.2

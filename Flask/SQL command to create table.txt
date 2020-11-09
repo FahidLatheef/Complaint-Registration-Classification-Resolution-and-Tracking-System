@@ -1,0 +1,17 @@
+
+CREATE TABLE `users` (
+ `Id` int(11) NOT NULL AUTO_INCREMENT,
+ `Name` varchar(30) NOT NULL,
+ `Email` varchar(30) NOT NULL,
+ `Date received` date NOT NULL DEFAULT current_timestamp(),
+ `Issue` varchar(40) NOT NULL,
+ `Sub-issue` varchar(40) DEFAULT NULL,
+ `Consumer complaint narrative` varchar(1000) DEFAULT NULL,
+ `Product` varchar(30) NOT NULL,
+ `Response narrative` varchar(1000) DEFAULT NULL,
+ `Date of response` date DEFAULT NULL,
+ `Consumer disputed?` varchar(10) DEFAULT NULL,
+ PRIMARY KEY (`Id`)
+)
+
+
